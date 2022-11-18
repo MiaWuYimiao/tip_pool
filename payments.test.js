@@ -33,10 +33,11 @@ describe("Payments function test", function(){
         appendPaymentTable(curPayment);
 
         const tbList = document.querySelectorAll('#paymentTable tbody tr td');
-        expect(tbList.length).toEqual(3);
+        expect(tbList.length).toEqual(4);
         expect(tbList[0].innerHTML).toEqual('$80');
         expect(tbList[1].innerHTML).toEqual('$16');
         expect(tbList[2].innerHTML).toEqual('20%');
+        expect(tbList[3].innerHTML).toEqual('X');
     })
 
     afterEach(function(){

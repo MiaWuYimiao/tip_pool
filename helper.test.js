@@ -21,4 +21,13 @@ describe("Payments function test", function(){
         expect(tr.firstChild.innerHTML).toEqual('50');
     });
 
+    it('should generate delete td and append to tr on appendDeleteBtn(tr)', function () {
+        let newTr = document.createElement('tr');
+    
+        appendDeleteBtn(newTr);
+    
+        expect(newTr.children.length).toEqual(1);
+        expect(newTr.firstChild.innerHTML).toEqual('X');
+      });    
+
 })
